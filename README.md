@@ -1,25 +1,25 @@
 # unimportant-zebra
 Story Card(s)
 
-As a: Kayaker
+As a...... Kayaker
 
 
-I want to: see how many/ if any kayaks are available
+I want to...... see how many/ if any kayaks are available
 
 
-So that I: can know if my friends and I can kayak today
+So that I...... can know if my friends and I can kayak today
 
 
 ---
 
 
-As a: OAC employee
+As a...... OAC employee
 
 
-I want to: have a website that shows how many kayaks are available
+I want to...... have a website that shows how many kayaks are available
 
 
-So that I: can get less phone calls asking this and keep track of rentals easily
+So that I...... can get less phone calls asking this and keep track of rentals easily
 
 
 ---
