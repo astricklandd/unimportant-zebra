@@ -8,6 +8,8 @@ I want to: see how many/ if any kayaks are available
 
 
 So that I: can know if my friends and I can kayak today
+
+
 ---
 
 
