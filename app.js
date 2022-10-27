@@ -18,6 +18,7 @@ async function main(){
       // Connect to the MongoDB cluster
         client.connect();
         const collection = client.db("OAC").collection("Kayaks");
+        const collection2 = client.db("OAC").collection("renters");
         console.log('connected');
           // console.log('console log closed');
       
@@ -127,3 +128,9 @@ app.post('/updateKayaks/:name', async (req, res) =>
 
 app.listen(PORT, console.log(`server is running on port: ${PORT}` ));
 
+// login:
+// admin creds == yes
+// admin only; if checkbox clicked
+// print rented
+// if not print available
+// 
