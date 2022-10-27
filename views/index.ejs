@@ -17,16 +17,16 @@
       </form>
     </section>
 
-    <section data-position="planets">
+    <section data-position="Kayaks">
 <!-- teams with an S is the collection Name
 team is what my name is within the collection
 quote would be like orderFromSun for me -->
 
 
-    <h2> Planets in the Milky Way </h2>
+    <h2> Kayaks </h2>
     <ul class = "list">
-        <% for(var i = 0; i < planets.length; i++) {%>
-        <li class = "planets">
+        <% for(var i = 0; i < Kayaks.length; i++) {%>
+        <li class = "Kayaks">
             <span>Name: <%= Kayaks[i].name %></span><br>
          <form action="/updateKayaks/<%= Kayaks[i].name %>" method="post">
               <input type="submit" value = "Update"  />
@@ -40,7 +40,7 @@ quote would be like orderFromSun for me -->
 
     </section> 
     
-    <a target="blank" href="https://github.com/astricklandd/quebec-moonlander">Source Code</a>
+    <a target="blank" href="https://github.com/astricklandd/unimportant-zebra">Source Code</a>
     </html>
     
 

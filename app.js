@@ -74,7 +74,7 @@ app.post('/result', async (req, res) => {
   }
 }),
 
-app.post('/deletePlanets/:name', async (req, res) => 
+app.post('/deleteKayaks/:name', async (req, res) => 
 {
 
   console.log('req.params.name', req.params.name);
@@ -95,7 +95,7 @@ app.post('/deletePlanets/:name', async (req, res) =>
       }
     })
 
-    app.post('/updatePlanets/:name', async (req, res) => 
+    app.post('/updateKayaks/:name', async (req, res) => 
     {
     
       console.log('req.params.name', req.params.name);
@@ -106,7 +106,7 @@ app.post('/deletePlanets/:name', async (req, res) =>
             { name : req.params.name },
             {
               $set: {
-                name: 'Updated Planet',
+                name: 'Kayak ###',
                 // quote: 'Woo Pig Sooie'
                 }
             } 
