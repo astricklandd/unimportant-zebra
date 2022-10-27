@@ -2,9 +2,9 @@
 
 Here are some important links
 
- - [Projects](https://github.com/users/astricklandd/projects/1/views/3) page.
  - [Wiki](..) page.
- - .
+ - [Issues](https://github.com/astricklandd/unimportant-zebra/issues) section.
+ - [Projects](https://github.com/users/astricklandd/projects/1/views/3) section.
 
 ***Story Card(s)***
 
