@@ -1,4 +1,9 @@
 # unimportant-zebra
+
+Here are some important links
+
+[Projects](https://github.com/users/astricklandd/projects/1/views/3) page.
+
 ***Story Card(s)***
 
 As a...... Kayaker
