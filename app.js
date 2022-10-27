@@ -33,7 +33,6 @@ async function main(){
   }
 }
 
-
 app.get('/', async (req, res) => {
 try{
 
@@ -44,7 +43,7 @@ try{
   if(!result) return false; 
 
   res.render('index', { 
-    planets: result
+    kayaks: result
   })
  
 
@@ -95,34 +94,34 @@ app.post('/deleteKayaks/:name', async (req, res) =>
       }
     })
 
-    app.post('/updateKayaks/:name', async (req, res) => 
-    {
-    
-      console.log('req.params.name', req.params.name);
-      try {
-        client.connect; 
-        const collection = client.db("OAC").collection("Kayaks");
-        await collection.findOneAndUpdate( 
-            { name : req.params.name },
-            {
-              $set: {
-                name: 'Kayak ###',
-                // quote: 'Woo Pig Sooie'
-                }
-            } 
-            
-            )
-          
-            res.redirect('/');
+app.post('/updateKayaks/:name', async (req, res) => 
+{
+
+  console.log('req.params.name', req.params.name);
+  try {
+    client.connect; 
+    const collection = client.db("OAC").collection("Kayaks");
+    await collection.findOneAndUpdate( 
+        { name : req.params.name },
+        {
+          $set: {
+            name: 'Kayak ###',
+            // quote: 'Woo Pig Sooie'
+            }
+        } 
         
-          } catch(e){
-            console.log(e)
-          }
-          finally{
-            // client.close
-          
-          }
-        })
+        )
+      
+        res.redirect('/');
+    
+      } catch(e){
+        console.log(e)
+      }
+      finally{
+        // client.close
+      
+      }
+    })
 
 
 

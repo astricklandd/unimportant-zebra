@@ -25,13 +25,13 @@ quote would be like orderFromSun for me -->
 
     <h2> Kayaks </h2>
     <ul class = "list">
-        <% for(var i = 0; i < Kayaks.length; i++) {%>
+        <% for(var i = 0; i < kayaks.length; i++) {%>
         <li class = "Kayaks">
-            <span>Name: <%= Kayaks[i].name %></span><br>
-         <form action="/updateKayaks/<%= Kayaks[i].name %>" method="post">
+            <span>Name: <%= kayaks[i].name %></span><br>
+         <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
               <input type="submit" value = "Update"  />
             </form>
-            <form action="/deleteKayaks/<%= Kayaks[i].name %>" method="post">
+            <form action="/deleteKayaks/<%= kayaks[i].name %>" method="post">
               <input type="submit" value = "Delete" />
             </form>
             <div> <br> </div>
