@@ -8,7 +8,7 @@
 
 *story card one*
 
-**As a** Kayak Rentaler
+**As a** Kayak Renter
 
 **I want to** see how many/ if any kayaks are available
 
