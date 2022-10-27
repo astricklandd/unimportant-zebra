@@ -1,14 +1,15 @@
-# unimportant-zebra
-***Story Card(s)***
+# una oac kayak rental thingy 
+**on github as: unimportant-zebra**
 
-As a...... Kayaker
+### Story Cards
 
+*story card one*
 
-I want to...... see how many/ if any kayaks are available
+**As a** Kayak Rentaler
 
+**I want to** see how many/ if any kayaks are available
 
-So that I...... can know if my friends and I can kayak today
-
+**So that** I can know if my friends and I can kayak today
 
 ---
 
