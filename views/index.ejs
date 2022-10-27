@@ -29,7 +29,11 @@ quote would be like orderFromSun for me -->
         <li class = "Kayaks">
             <span>Name: <%= kayaks[i].name %></span><br>
          <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
-              <input type="submit" value = "Update"  />
+          <input type="text" value = "Name"  />
+          <input type="text" value = "L-Number"  />
+          <input type="text" value = "Phone-Number"  />
+          <br>
+          <input type="submit" value = "Update"  />
             </form>
             <form action="/deleteKayaks/<%= kayaks[i].name %>" method="post">
               <input type="submit" value = "Delete" />
@@ -47,3 +51,4 @@ quote would be like orderFromSun for me -->
     <!-- <script src="main.js"></script> -->
   </body>
 </html>
+
