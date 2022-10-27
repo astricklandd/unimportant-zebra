@@ -1,14 +1,10 @@
-# una oac kayak rental thingy 
+# Lion Floats Kayak Rentals
 **on github as: unimportant-zebra**
 
-Here are some important links
-
- - [Wiki](..) page.
- - [Issues](https://github.com/astricklandd/unimportant-zebra/issues) section.
- - [Projects](https://github.com/users/astricklandd/projects/1/views/3) section.
- - [Project proposal](https://github.com/astricklandd/unimportant-zebra/blob/main/oac.md) page.
 
 ### Story Cards
+
+## User Story (points = 👕 lg) 
 
 *story card one*
 
@@ -51,4 +47,47 @@ Repo needs to be done well. Good README, Wiki, Project Board, Issues, etc.
 
 
 Dr. Cumbie needs to know where we meet (maybe a wiki of a schedule sent to him)
+
+---
+
+**Packages To Install**
+
+install node.js through web browser: https://nodejs.org/en/download/ 
+
+app.js: npm i app.js 
+
+ejs: npm i ejs
+
+mongodb: npm i mongodb
+
+nodemon: npm i nodemon
+
+express: npm i express
+
+---
+
+**Info:**
+
+-Each kayaks has a name; but w/out knowing them all this may be useless info
+
+-Have a MongoDB named OAC with a new collection that stores 20 kayaks
+
+-User interface should show how many kayaks are available (listed 1, 2, 3, 4,.... 20 vertically)
+
+-Employee interface should allow to mark kayaks as rented/ returned
+
+-^^ by WHOM: name, phone number, L number (listed only on employee side)
+
+-Maybe have to create a collection of employee's that can only be added to by an admin account, and only employees w/ proper creds can login to rent kayaks out or mark as returned
+
+-How long has the kayak been rented/ how long until it is returned
+
+-Will need to be posted to Heroku as well
+
+-Needs to look cool (low priority)
+
+-Commit to branches, try to not use main as much to ensure proper functionality
+
+-Heroku usually deploys one branch at a time, to deploy more than one branch either toggle or pay for heroku membership
+
 
