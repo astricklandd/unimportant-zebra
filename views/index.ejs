@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kayak Rental</title>
+  </head>
+
+  <body>
+    <h1 data-position="header">Rent a Kayak!</h1>
+
+    <section data-position="add-quote">
+      <h2>Add Kayak</h2>
+
+      <form action="/result" method="POST">
+        <input type="text" placeholder="Kayak name" name="name" />
+        <button type="submit">Add Now!</button>
+      </form>
+    </section>
+
+    <section data-position="planets">
+<!-- teams with an S is the collection Name
+team is what my name is within the collection
+quote would be like orderFromSun for me -->
+
+
+    <h2> Planets in the Milky Way </h2>
+    <ul class = "list">
+        <% for(var i = 0; i < planets.length; i++) {%>
+        <li class = "planets">
+            <span>Name: <%= Kayaks[i].name %></span><br>
+         <form action="/updateKayaks/<%= Kayaks[i].name %>" method="post">
+              <input type="submit" value = "Update"  />
+            </form>
+            <form action="/deleteKayaks/<%= Kayaks[i].name %>" method="post">
+              <input type="submit" value = "Delete" />
+            </form>
+            <div> <br> </div>
+        </li>
+        <% } %>
+
+    </section> 
+    
+    <a target="blank" href="https://github.com/astricklandd/quebec-moonlander">Source Code</a>
+    </html>
+    
+
+    <!-- <script src="main.js"></script> -->
+  </body>
+</html>
