@@ -2,7 +2,9 @@
 
 Here are some important links
 
-[Projects](https://github.com/users/astricklandd/projects/1/views/3) page.
+ - [Projects](https://github.com/users/astricklandd/projects/1/views/3) page.
+ - [Wiki](..) page.
+ - .
 
 ***Story Card(s)***
 
