@@ -5,6 +5,7 @@ Here are some important links
  - [Wiki](..) page.
  - [Issues](https://github.com/astricklandd/unimportant-zebra/issues) section.
  - [Projects](https://github.com/users/astricklandd/projects/1/views/3) section.
+ - [Project proposal](https://github.com/astricklandd/unimportant-zebra/blob/main/oac.md) page.
 
 ***Story Card(s)***
 
