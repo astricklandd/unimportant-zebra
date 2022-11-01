@@ -13,19 +13,23 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs');
 
+kayaksAvailbale = ""; 
+collection2 = "";
+renters = "";
+
 async function main(){
   try {
       // Connect to the MongoDB cluster
         client.connect();
         const collection = client.db("OAC").collection("Kayaks");
         const collection2 = client.db("OAC").collection("renters");
-        const kayaksAvailable= await collection.countDocuments();
+        const kayaksInventory= await collection.countDocuments();
         const renterNum = await collection2.countDocuments();
 
         //does count correctly!!! Print this on employee page(index.ejs)
-        math = (kayaksAvailable-renterNum);
-        console.log(math);
+        kayaksAvailable = (kayaksInventory-renterNum);
         console.log(kayaksAvailable);
+        console.log(kayaksInventory);
         console.log(renterNum);
         
         console.log('connected');
@@ -33,6 +37,8 @@ async function main(){
       
       
       let posts = await collection.find().toArray();
+      let posts2 = await collection2.find().toArray();
+
    
       return posts; 
     
@@ -54,7 +60,7 @@ try{
 
   res.render('index', { 
     kayaks: result,
-    renter: result
+    renters: result
   })
  
 
@@ -139,10 +145,7 @@ app.post('/result2', async (req, res) => {
         console.log("req.body: ", req.body.name) 
         client.connect; 
         const collection = client.db("OAC").collection("renters");
-        await collection.insertOne( { name : req.body.name2 } );
-        await collection.insertOne( { lNum : req.body.num2 } );
-        await collection.insertOne( { phoneNum : req.body.phoneNum } );
-        await collection.insertOne( { dateRent : req.body.date } );
+        await collection.insertOne( { name : req.body.name2  , lNum : req.body.num2, phoneNum : req.body.phoneNum  , dateRent : req.body.date } );
           
         res.redirect('/');
       }

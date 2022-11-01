@@ -19,7 +19,7 @@
 
     <section data-position="add-renter">
       <h3>Add Renter</h3>
-      This currently adds a new field for each slot, not all added into one entry
+      
       <form action="/result2" method="POST">
         <input type="text" placeholder="Renter name" name="name2" />
       
@@ -31,6 +31,9 @@
         <br>
         <button type="submit">Add Now!</button>
       </form>
+      <br>
+      There are <%= kayaksAvailable %> available! 
+    
 
       <!-- <form action="/result2" method="POST">
         <input type="text" placeholder="Kayak name" name="name2" />
@@ -43,28 +46,27 @@
     <section data-position="Kayaks">
 
 
-    <h2> Rent a Kayak </h2> 
-    <h3> Enter renter information below! </h3>
+    <h2> Kayak Information </h2> 
 
     <ul class = "list">
         <% for(var i = 0; i < kayaks.length; i++) {%>
-        <li class = "Kayaks">
-            <span>Name: <%= kayaks[i].name %></span><br>
-         <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
-           <!-- <form action="/updateRenters/<%= kayaks[i].name %>" method="post"> -->
-             <input type="text" value = "Name"  name='student'/> 
-            <!-- </form> -->
-            <input type="text" value = "L Number" name="lNum" />
-            <input type="text" value = "Phone Number" name="phoneNum" />
+        <li class = "renters">
+            <span>Kayak: <%= kayaks[i].name %></span><br>
+            <!-- <span>Renter: <%= renters[i].name %></span><br> -->
+         <!-- <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
           <br>
           <input type="submit" value = "Update"  />
-            </form>       
+            </form>        -->
+
             <form action="/deleteKayaks/<%= kayaks[i].name %>" method="post">
               <input type="submit" value = "Delete" />
             </form>
+
             <div> <br> </div>
+
         </li>
         <% } %>
+        
 
     </section> 
     
