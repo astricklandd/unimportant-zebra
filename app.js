@@ -19,6 +19,15 @@ async function main(){
         client.connect();
         const collection = client.db("OAC").collection("Kayaks");
         const collection2 = client.db("OAC").collection("renters");
+        const kayaksAvailable= await collection.countDocuments();
+        const renterNum = await collection2.countDocuments();
+
+        //does count correctly!!! Print this on employee page(index.ejs)
+        math = (kayaksAvailable-renterNum);
+        console.log(math);
+        console.log(kayaksAvailable);
+        console.log(renterNum);
+        
         console.log('connected');
           // console.log('console log closed');
       
@@ -44,7 +53,8 @@ try{
   if(!result) return false; 
 
   res.render('index', { 
-    kayaks: result
+    kayaks: result,
+    renter: result
   })
  
 
@@ -107,7 +117,6 @@ app.post('/updateKayaks/:name', async (req, res) =>
         {
           $set: {
             name: 'Kayak ###',
-            // quote: 'Woo Pig Sooie'
             }
         } 
         
@@ -122,9 +131,33 @@ app.post('/updateKayaks/:name', async (req, res) =>
         // client.close
       
       }
-    })
+    }),
+
+app.post('/result2', async (req, res) => {
+
+      try {
+        console.log("req.body: ", req.body.name) 
+        client.connect; 
+        const collection = client.db("OAC").collection("renters");
+        await collection.insertOne( { name : req.body.name2 } );
+        await collection.insertOne( { lNum : req.body.num2 } );
+        await collection.insertOne( { phoneNum : req.body.phoneNum } );
+        await collection.insertOne( { dateRent : req.body.date } );
+          
+        res.redirect('/');
+      }
+      catch(e){
+        console.log(e)
+      }
+      finally{
+        // client.close
+      
+      }
+    }), //this adds a renter 
+    
 
 
+    
 
 app.listen(PORT, console.log(`server is running on port: ${PORT}` ));
 

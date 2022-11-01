@@ -6,10 +6,10 @@
   </head>
 
   <body>
-    <h1 data-position="header">Rent a Kayak!</h1>
+    <h1 data-position="header">Outdoor Adventure Center </h1>
 
-    <section data-position="add-quote">
-      <h2>Add Kayak</h2>
+    <section data-position="add-kayak">
+      <h3>Add Kayak</h3>
 
       <form action="/result" method="POST">
         <input type="text" placeholder="Kayak name" name="name" />
@@ -17,24 +17,48 @@
       </form>
     </section>
 
+    <section data-position="add-renter">
+      <h3>Add Renter</h3>
+      This currently adds a new field for each slot, not all added into one entry
+      <form action="/result2" method="POST">
+        <input type="text" placeholder="Renter name" name="name2" />
+      
+        <input type="text" placeholder="L Number" name="num2" />     
+
+        <input type="text" placeholder="Phone Number" name="phoneNum" />      
+
+        <input type="text" placeholder="Rent Date" name="date" />
+        <br>
+        <button type="submit">Add Now!</button>
+      </form>
+
+      <!-- <form action="/result2" method="POST">
+        <input type="text" placeholder="Kayak name" name="name2" />
+        <button type="submit">Add Now!</button>
+      </form> -->
+
+    </section>
+      
+
     <section data-position="Kayaks">
-<!-- teams with an S is the collection Name
-team is what my name is within the collection
-quote would be like orderFromSun for me -->
 
 
-    <h2> Kayaks </h2>
+    <h2> Rent a Kayak </h2> 
+    <h3> Enter renter information below! </h3>
+
     <ul class = "list">
         <% for(var i = 0; i < kayaks.length; i++) {%>
         <li class = "Kayaks">
             <span>Name: <%= kayaks[i].name %></span><br>
          <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
-          <input type="text" value = "Name"  />
-          <input type="text" value = "L-Number"  />
-          <input type="text" value = "Phone-Number"  />
+           <!-- <form action="/updateRenters/<%= kayaks[i].name %>" method="post"> -->
+             <input type="text" value = "Name"  name='student'/> 
+            <!-- </form> -->
+            <input type="text" value = "L Number" name="lNum" />
+            <input type="text" value = "Phone Number" name="phoneNum" />
           <br>
           <input type="submit" value = "Update"  />
-            </form>
+            </form>       
             <form action="/deleteKayaks/<%= kayaks[i].name %>" method="post">
               <input type="submit" value = "Delete" />
             </form>
