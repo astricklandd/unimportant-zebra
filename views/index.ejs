@@ -7,15 +7,10 @@
 
   <body>
     <h1 data-position="header">Outdoor Adventure Center </h1>
+    <a href="admin.ejs">Admin View</a>
+<!-- this needs to include a login when clicked (hardcoded for now) -->
+<!-- it would also be helpful if it worked  -->
 
-    <section data-position="add-kayak">
-      <h3>Add Kayak</h3>
-
-      <form action="/result" method="POST">
-        <input type="text" placeholder="Kayak name" name="name" />
-        <button type="submit">Add Now!</button>
-      </form>
-    </section>
 
     <section data-position="add-renter">
       <h3>Add Renter</h3>
@@ -50,9 +45,10 @@
 
     <ul class = "list">
         <% for(var i = 0; i < kayaks.length; i++) {%>
-        <li class = "renters">
+        <li class = "kayakUser">
             <span>Kayak: <%= kayaks[i].name %></span><br>
-            <!-- <span>Renter: <%= renters[i].name %></span><br> -->
+            <span>Renter: <%= renterInfo[i].name %></span><br>
+
          <!-- <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
           <br>
           <input type="submit" value = "Update"  />
@@ -71,7 +67,7 @@
     </section> 
     
     <a target="blank" href="https://github.com/astricklandd/unimportant-zebra">Source Code</a>
-    </html>
+    
     
 
     <!-- <script src="main.js"></script> -->
