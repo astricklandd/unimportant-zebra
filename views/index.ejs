@@ -47,12 +47,7 @@
         <% for(var i = 0; i < kayaks.length; i++) {%>
         <li class = "kayakUser">
             <span>Kayak: <%= kayaks[i].name %></span><br>
-            <!-- <span>Renter: <%= renterInfo[i].name %></span><br> -->
-
-         <!-- <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
-          <br>
-          <input type="submit" value = "Update"  />
-            </form>        -->
+            
 
             <form action="/deleteKayaks/<%= kayaks[i].name %>" method="post">
               <input type="submit" value = "Delete" />

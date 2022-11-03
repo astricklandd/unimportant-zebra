@@ -7,5 +7,24 @@
     "mongodb": "^4.11.0",
     "node": "^14.21.0",
     "nodemon": "^2.0.20"
-  }
+  },
+  "name": "unimportant-zebra",
+  "description": "Here are some important links",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astricklandd/unimportant-zebra.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astricklandd/unimportant-zebra/issues"
+  },
+  "homepage": "https://github.com/astricklandd/unimportant-zebra#readme"
 }
