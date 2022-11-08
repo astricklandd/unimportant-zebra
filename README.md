@@ -8,7 +8,7 @@
  - [Issues](https://github.com/astricklandd/unimportant-zebra/issues) section.
  - [Projects](https://github.com/users/astricklandd/projects/1/views/3) section.
  - [Project proposal](https://github.com/astricklandd/unimportant-zebra/blob/main/oac.md) page.
-
+ - [Wiki](https://github.com/astricklandd/unimportant-zebra/wiki/Wireframe-Wiki) wireframe.
 
 
 
