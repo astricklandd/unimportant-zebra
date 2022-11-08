@@ -65,7 +65,6 @@ async function goodName(){
 }
 
 
-
 app.get('/', async (req, res) => {
 try{
 
@@ -88,6 +87,29 @@ try{
 }
 });
 
+app.get('/admin', async (req, res) => {
+  try{
+  
+    const result = await main().catch(console.error);
+    // console.log("results: ", result); 
+    // console.log("get / result name: ", result.name); 
+  
+    if(!result) return false; 
+  
+    res.render('admin', { 
+      kayaks: result,
+      // renters: result
+    })
+   
+  
+  } catch (e) {
+    console.error(e);
+  } finally {
+    //  client.close();
+  }
+  });
+
+
 app.post('/result', async (req, res) => {
 
   try {
@@ -96,7 +118,7 @@ app.post('/result', async (req, res) => {
     const collection = client.db("OAC").collection("Kayaks");
     await collection.insertOne( { name : req.body.name } );
       
-    res.redirect('/');
+    res.redirect('/admin');
   }
   catch(e){
     console.log(e)
@@ -107,17 +129,22 @@ app.post('/result', async (req, res) => {
   }
 }),
 
-app.post('/deleteKayaks/:name', async (req, res) => 
+app.post('/deleteKayaks/:id', async (req, res) => 
+// returns to the index page when adding or deleting from admin
+// can't delete kayak if it's blank (maybe because it's looking for a name that is not there?)
 {
 
-  console.log('req.params.name', req.params.name);
+  console.log('req.params.name', req.params.id);
   try {
     client.connect; 
     const collection = client.db("OAC").collection("Kayaks");
     await collection.findOneAndDelete( 
-        { name : req.params.name } )
+        { _id : req.params.id } )
       
-        res.redirect('/');
+        //that extra ObjectId(req.params.id)
+
+
+        //res.redirect('/');
     
       } catch(e){
         console.log(e)
@@ -125,6 +152,7 @@ app.post('/deleteKayaks/:name', async (req, res) =>
       finally{
         // client.close
       
+        res.redirect('/admin');
       }
     })
 
@@ -139,7 +167,7 @@ app.post('/updateKayaks/:name', async (req, res) =>
         { name : req.params.name },
         {
           $set: {
-            name: 'Kayak ###',
+            name: 'Kayak rented',
             }
         } 
         

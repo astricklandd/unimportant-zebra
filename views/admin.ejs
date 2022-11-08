@@ -2,19 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Employee View</title>
+    <title>Admin View</title>
   </head>
 
   <body>
 
-<section data-position="add-kayak">
+<h1>Kayak Admin Page</h1> 
+
+<a href="/">Renter POage</a>
+    <!-- returns to the index page when a adding or deleting might -->
+
+
+<section data-position="add-kayak"> 
+  <!-- prevent user from adding kayak if left blank -->
     <h3>Add Kayak</h3>
 
     <form action="/result" method="POST">
-      <input type="text" placeholder="Kayak name" name="name" />
+      <input type="text" placeholder="Kayak name" name="name" required />
       <button type="submit">Add Now!</button>
     </form>
+
+
   </section>
+
+  <section data-position="Kayaks">
+
+
+    <h2> Kayak Information </h2> 
+
+    <ul class = "list">
+        <% for(var i = 0; i < kayaks.length; i++) {%>
+        <li class = "kayakUser">
+
+
+            <span>Kayak: <%= kayaks[i].name %></span><br>
+            
+
+            <form action="/deleteKayaks/<%= kayaks[i]._id %>" method="post">
+          
+              <!-- dleete this after delete is wokring  -->
+                <p><%= kayaks[i]._id %></p> 
+          
+                <input type="hidden" name="id" value="<%= kayaks[i]._id %>">
+
+              <input type="submit" value = "Delete" />
+            </form>
+
+            <div> <br> </div>
+
+        </li>
+        <% } %>
+        
+
+    </section> 
 
 
   

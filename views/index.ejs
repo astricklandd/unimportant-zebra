@@ -7,7 +7,9 @@
 
   <body>
     <h1 data-position="header">Outdoor Adventure Center </h1>
-    <a href="admin.ejs">Admin View</a>
+
+
+    <a href="/admin">Admin View</a>
 <!-- this needs to include a login when clicked (hardcoded for now) -->
 <!-- it would also be helpful if it worked  -->
 
@@ -49,8 +51,8 @@
             <span>Kayak: <%= kayaks[i].name %></span><br>
             
 
-            <form action="/deleteKayaks/<%= kayaks[i].name %>" method="post">
-              <input type="submit" value = "Delete" />
+            <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
+              <input type="submit" value = "rent" />
             </form>
 
             <div> <br> </div>
