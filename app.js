@@ -194,7 +194,7 @@ app.get('/renters', async (req, res) => {
       if(!result) return false; 
     
       res.render('index', { 
-        renterInfo: result,      
+        renters: result,      
       })
     
     } catch (e) {
