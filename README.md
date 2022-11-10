@@ -1,6 +1,3 @@
-# Lion Floats Kayak Rentals
-**on github as: unimportant-zebra**
-
 ## Here are some important links
 
  - [Wiki](https://github.com/astricklandd/unimportant-zebra/wiki) home page.
