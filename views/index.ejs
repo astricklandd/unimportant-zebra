@@ -15,21 +15,6 @@
 
 <!-- Based on wireframe, the add renter section below should be a different page
 that loads when a user clicks the RENT button -->
-    <section data-position="add-renter">
-      <h3>Add Renter</h3>
-      
-      <form action="/result2" method="POST">
-        <input type="text" placeholder="Renter name" name="name2" />
-      
-        <input type="text" placeholder="L Number" name="num2" />     
-
-        <input type="text" placeholder="Phone Number" name="phoneNum" />      
-
-        <input type="text" placeholder="Rent Date" name="date" />
-        <br>
-        <button type="submit">Add Now!</button>
-      </form>
-      <br>
       There are <%= kayaksAvailable %> available kayaks! 
     
     </section>
@@ -38,7 +23,8 @@ that loads when a user clicks the RENT button -->
     <section data-position="Kayaks">
 
 
-    <h2> Kayak Information </h2> 
+    <h2> Kayak Rentals </h2> 
+    <h3> Enter all information below:</h3>
 
     <!-- This (below) will allow a kayak to say kayak rented
     However, this now makes the kayaksAvailable variable incorrect -->
@@ -51,10 +37,21 @@ that loads when a user clicks the RENT button -->
         <li class = "kayaks">
             <span>Kayak: <%= kayaks[i].name %></span><br>
             
-
-            <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
-              <input type="submit" value = "rent" />
+            <form action="/result2" method="POST">
+              <input type="text" placeholder="Renter name" name="name2" />
+            
+              <input type="text" placeholder="L Number" name="num2" />     
+      
+              <input type="text" placeholder="Phone Number" name="phoneNum" />      
+      
+              <input type="text" placeholder="Rent Date" name="date" />
+              <br>
+              <button type="submit">Add Renter!</button>
             </form>
+              <form action="/updateKayaks/<%= kayaks[i].name %>" method="post">
+                <input type="submit" value = "Rent Now" />
+              </form>
+          
 
             <div> <br> </div>
 
