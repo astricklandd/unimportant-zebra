@@ -249,9 +249,3 @@ app.post('/deleteRenters/:name', async (req, res) =>
 
 app.listen(PORT, console.log(`server is running on port: ${PORT}` ));
 
-// login:
-// admin creds == yes
-// admin only; if checkbox clicked
-// print rented
-// if not print available
-// 

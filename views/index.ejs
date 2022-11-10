@@ -11,9 +11,10 @@
 
     <a href="/admin">Admin View</a>
 <!-- this needs to include a login when clicked (hardcoded for now) -->
-<!-- it would also be helpful if it worked  -->
 
 
+<!-- Based on wireframe, the add renter section below should be a different page
+that loads when a user clicks the RENT button -->
     <section data-position="add-renter">
       <h3>Add Renter</h3>
       
@@ -29,14 +30,8 @@
         <button type="submit">Add Now!</button>
       </form>
       <br>
-      There are <%= kayaksAvailable %> available! 
+      There are <%= kayaksAvailable %> available kayaks! 
     
-
-      <!-- <form action="/result2" method="POST">
-        <input type="text" placeholder="Kayak name" name="name2" />
-        <button type="submit">Add Now!</button>
-      </form> -->
-
     </section>
       
 
@@ -45,9 +40,15 @@
 
     <h2> Kayak Information </h2> 
 
+    <!-- This (below) will allow a kayak to say kayak rented
+    However, this now makes the kayaksAvailable variable incorrect -->
+
+    <!-- Also this changed the name of a kayak to "kayak rented"
+    if we want to do that, we will need an employee input to update name of kayak after it
+  is no longer rented  -->
     <ul class = "list">
         <% for(var i = 0; i < kayaks.length; i++) {%>
-        <li class = "kayakUser">
+        <li class = "kayaks">
             <span>Kayak: <%= kayaks[i].name %></span><br>
             
 
