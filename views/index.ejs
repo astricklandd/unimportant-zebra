@@ -47,49 +47,49 @@
 
 <section class="home">
 </section>
-<div style="height: 100px">
+<center>
+<div class="card">
+  <div class="card-header">
+      <div style="height: 100px">
     <!-- just to make scrolling effect possible -->
-  <h2 class="myH2">Kayaks Available</h2>
-  <p class="myP">This is a responsive fixed navbar animated on scroll
-  <button onclick="window.location.href= 'https://oac-kayaks.herokuapp.com';">
-  Kayaks
-</button> </p>
+            <h2 class="myH2">Kayaks Available</h2>
+            <p class="myP"><button onclick="window.location.href= 'https://oac-kayaks.herokuapp.com';">
+            Kayak Rental</button> </p>
 
-</div>
+          </div>
 
-<!-- Jquery needed -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/scripts.js"></script>
+          <!-- Jquery needed -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script src="js/scripts.js"></script>
 
-<!-- Function used to shrink nav bar removing paddings and adding black background -->
-<script>
-    $(window).scroll(function() {
-        if ($(document).scrollTop() > 50) {
-            $('.nav').addClass('affix');
-            console.log("OK");
-        } else {
-            $('.nav').removeClass('affix');
-        }
-    });
-</script>
+          <!-- Function used to shrink nav bar removing paddings and adding black background -->
+          <script>
+              $(window).scroll(function() {
+                  if ($(document).scrollTop() > 50) {
+                      $('.nav').addClass('affix');
+                      console.log("OK");
+                  } else {
+                      $('.nav').removeClass('affix');
+                  }
+              });
+          </script>
 
-
-
-  <body>
-    <h1 data-position="header">Outdoor Adventure Center </h1>
+            <body>
+              <h1 data-position="header">Outdoor Adventure Center </h1>
 
 
-    <a href="/admin">Admin View</a> <br>
-<!-- this needs to include a login when clicked (hardcoded for now) -->
+              <a href="/admin">Admin View</a> <br>
+          <!-- this needs to include a login when clicked (hardcoded for now) -->
 
 
-<!-- Based on wireframe, the add renter section below should be a different page
-that loads when a user clicks the RENT button -->
-      <h2>There are <%= kayaksAvailable %> available kayaks! </h2>
+          <!-- Based on wireframe, the add renter section below should be a different page
+          that loads when a user clicks the RENT button -->
+                <h2>There are <%= kayaksAvailable %> available kayaks! </h2>
     
     </section>
-      
-
+      </div>
+  </div>  
+</center>
     <section data-position="Kayaks">
 
 
