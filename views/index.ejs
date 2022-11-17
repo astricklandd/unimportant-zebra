@@ -50,9 +50,10 @@
 <center>
 <div class="card">
   <div class="card-header">
-      <div style="height: 100px">
+      <div style="height: 150px">
     <!-- just to make scrolling effect possible -->
-            <h2 class="myH2">Kayak Rentals</h2>
+            <h2 class="myH2">There are <%= kayaksAvailable %> available kayaks! </h2>
+            <h1> Enter all information below to rent a kayak:</h1> <br>
           </div>
 
           <!-- Jquery needed -->
@@ -72,12 +73,11 @@
           </script>
 
             <body>
-              <!-- <h1 data-position="header">Outdoor Adventure Center </h1> -->
-              <!-- <a href="/admin">Admin View</a> <br> -->
+        
           <!-- this needs to include a login when clicked (hardcoded for now) -->
           <!-- Based on wireframe, the add renter section below should be a different page
           that loads when a user clicks the RENT button -->
-                <h2>There are <%= kayaksAvailable %> available kayaks! </h2>
+              
     
     </section>
       </div>
@@ -86,7 +86,6 @@
     <section data-position="Kayaks">
 
 <center>
-    <h2> Enter all information below to rent a kayak:</h2>
 
     <!-- This (below) will allow a kayak to say kayak rented
     However, this now makes the kayaksAvailable variable incorrect -->
