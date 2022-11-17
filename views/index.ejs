@@ -52,10 +52,7 @@
   <div class="card-header">
       <div style="height: 100px">
     <!-- just to make scrolling effect possible -->
-            <h2 class="myH2">Kayaks Available</h2>
-            <p class="myP"><button onclick="window.location.href= 'https://oac-kayaks.herokuapp.com';">
-            Kayak Rental</button> </p>
-
+            <h2 class="myH2">Kayak Rentals</h2>
           </div>
 
           <!-- Jquery needed -->
@@ -75,13 +72,9 @@
           </script>
 
             <body>
-              <h1 data-position="header">Outdoor Adventure Center </h1>
-
-
-              <a href="/admin">Admin View</a> <br>
+              <!-- <h1 data-position="header">Outdoor Adventure Center </h1> -->
+              <!-- <a href="/admin">Admin View</a> <br> -->
           <!-- this needs to include a login when clicked (hardcoded for now) -->
-
-
           <!-- Based on wireframe, the add renter section below should be a different page
           that loads when a user clicks the RENT button -->
                 <h2>There are <%= kayaksAvailable %> available kayaks! </h2>
@@ -92,9 +85,8 @@
 </center>
     <section data-position="Kayaks">
 
-
-    <h2> Kayak Rentals </h2> 
-    <h3> Enter all information below:</h3>
+<center>
+    <h2> Enter all information below to rent a kayak:</h2>
 
     <!-- This (below) will allow a kayak to say kayak rented
     However, this now makes the kayaksAvailable variable incorrect -->
@@ -132,7 +124,7 @@
     </section> 
     
     <a target="blank" href="https://github.com/astricklandd/unimportant-zebra">Source Code</a>
-    
+  </center>
     
 
     <!-- <script src="main.js"></script> -->
