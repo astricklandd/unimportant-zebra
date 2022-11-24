@@ -35,15 +35,20 @@
         <li class = "kayaks">
 
 
-            <span>Kayak: <%= kayaks[i].name %></span><br>
+            <!-- not nessecary
+              <span>Kayak: <%= kayaks[i].name %></span><br> 
+            <span>Kayakid: <%= kayaks[i]._id %></span><br> -->
+           
             
 
             <form action="/deleteKayaks/<%= kayaks[i]._id %>" method="post">
-          
+              <!-- 11/23 all it's doing at the moment is sending the id to console -->
               <!-- dleete this after delete is wokring  -->
-                <p><%= kayaks[i]._id %></p> 
+                <!-- <p><%= kayaks[i]._id %></p>  -->
           
-                <input type="hidden" name="id" value="<%= kayaks[i]._id %>">
+                <!-- <input type="hidden" name="id" value="<%= kayaks[i]._id %>"> -->
+                 <%= kayaks[i].name %> <br> <%= kayaks[i]._id %><br>
+                  <input type="hidden" name="id" value="<%= kayaks[i]._id %>">
 
               <input type="submit" value = "Delete" />
             </form>
@@ -58,14 +63,14 @@
 
 <!-- test code 
  -->
- <ul class = "list">
+ <!-- <ul class = "list">
   <% for(var i = 0; i < renters.length; i++) {%>
   <li class = "renters">
       <span>Renter: <%= renters[i].name %></span><br>
       <div> <br> </div>
 
   </li>
-  <% } %>
+  <% } %> -->
   
   <a target="blank" href="https://github.com/astricklandd/unimportant-zebra">Source Code</a>
 </body>

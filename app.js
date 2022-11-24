@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('node:path')
 const bodyParser = require('body-parser')
+const { ObjectId } = require('mongodb')
 const app = express()
 const { MongoClient, ServerApiVersion, ListIndexesCursor } = require('mongodb');
 const { resourceLimits } = require('node:worker_threads');
@@ -139,7 +140,9 @@ app.post('/deleteKayaks/:id', async (req, res) =>
     client.connect; 
     const collection = client.db("OAC").collection("Kayaks");
     await collection.findOneAndDelete( 
-        { _id : req.params.id } )
+        {
+          "_id": ObjectId(req.params.id)
+       } )
       
         //that extra ObjectId(req.params.id)
 
@@ -227,14 +230,14 @@ app.post('/result2', async (req, res) => {
 app.post('/deleteRenters/:name', async (req, res) => 
     {
     
-      console.log('req.params.name', req.params.name);
+      console.log('req.params.name', req.params.id);
       try {
         client.connect; 
         const collection2 = client.db("OAC").collection("renters");
         await collection2.findOneAndDelete( 
             { name : req.params.name } )
           
-            res.redirect('/');
+            // res.redirect('/');
         
           } catch(e){
             console.log(e)
