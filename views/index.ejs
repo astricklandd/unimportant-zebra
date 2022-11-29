@@ -55,7 +55,7 @@
             <h2 class="myH2">There are <%= kayaksAvailable %> available kayaks! </h2>
             <h1> Enter all information below to rent a kayak:</h1> <br>
           </div>
-
+          
           <!-- Jquery needed -->
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
           <script src="js/scripts.js"></script>
@@ -95,7 +95,8 @@
   is no longer rented  -->
     <ul class = "list">
         <% for(var i = 0; i < kayaks.length; i++) {%>
-        <li class = "kayaks">
+          <h3 class="myH3">
+          <li class = "kayaks">
             <span>Kayak: <%= kayaks[i].name %></span><br>
             
             <form action="/result2" method="POST">
@@ -115,11 +116,11 @@
           
 
             <div> <br> </div>
-
+          
         </li>
         <% } %>
         
-
+          </h3>
     </section> 
     
     <a target="blank" href="https://github.com/astricklandd/unimportant-zebra">Source Code</a>
