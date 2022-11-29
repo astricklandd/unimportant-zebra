@@ -1,8 +1,8 @@
 $(".delete").click(function(){
     console.log("delete button clicked");
-    var name = $(this).attr("name");
+    var name = $(this).attr("_id");
     
-    fetch(`Kayaks/Kayaks_name:${name}`, {
+    fetch(`Renters/renters_id:${name}`, {
       method:"delete",
       headers: {'Content-Type': 'applications/json'}
     })

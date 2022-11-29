@@ -34,7 +34,7 @@ async function main(){
           // console.log('console log closed');
       
       let posts = await collection.find().toArray();
-      let renterInfo = await collection2.find().toArray();
+      // let renterInfo = await collection2.find().toArray();
 
    
       return posts; 
@@ -92,15 +92,15 @@ try{
 app.get('/admin', async (req, res) => {
   try{
   
-    const result = await main().catch(console.error);
+    const result = await goodName().catch(console.error);
     // console.log("results: ", result); 
     // console.log("get / result name: ", result.name); 
   
     if(!result) return false; 
   
     res.render('admin', { 
-      kayaks: result,
-      // renters: result
+      // kayaks: result,
+       renters: result
     })
    
   
@@ -131,31 +131,23 @@ app.post('/result', async (req, res) => {
   }
 }),
 
-app.post('/deleteKayaks/:id', async (req, res) => 
-// returns to the index page when adding or deleting from admin
-// can't delete kayak if it's blank (maybe because it's looking for a name that is not there?)
-{
 
-  console.log('req.params.name', req.params.id);
+
+app.post('/deleteRenters/:_id', async (req, res) => 
+{
+  console.log('req.params._id', req.params._id);
   try {
     client.connect; 
-    const collection = client.db("OAC").collection("Kayaks");
-    await collection.findOneAndDelete( 
+    const collection2 = client.db("OAC").collection("Renters");
+    await collection2.findOneAndDelete( 
         {
-          "_id": ObjectId(req.params.id)
-       } )
-      
-        //that extra ObjectId(req.params.id)
+          "_id": ObjectId(req.params._id)
+       } )     
 
-
-        //res.redirect('/');
-    
       } catch(e){
         console.log(e)
       }
       finally{
-        // client.close
-      
         res.redirect('/admin');
       }
     })
@@ -228,28 +220,8 @@ app.post('/result2', async (req, res) => {
     }), //this adds a renter 
     
 
-app.post('/deleteRenters/:name', async (req, res) => 
-    {
     
-      console.log('req.params.name', req.params.id);
-      try {
-        client.connect; 
-        const collection2 = client.db("OAC").collection("renters");
-        await collection2.findOneAndDelete( 
-            { name : req.params.name } )
-          
-            // res.redirect('/');
         
-          } catch(e){
-            console.log(e)
-          }
-          finally{
-            // client.close
-          
-          }
-        })
-
-    
 
 app.listen(PORT, console.log(`server is running on port: ${PORT}` ));
 

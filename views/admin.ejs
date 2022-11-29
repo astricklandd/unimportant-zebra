@@ -25,33 +25,25 @@
 
   </section>
 
-  <section data-position="Kayaks">
+  <section data-position="Renters">
 
 
-    <h2> Kayak Information </h2> 
-    <!-- This is currently displaying kayak IDs, not renter information  -->
+    <h2> Renter Information </h2> 
+
     <ul class = "list">
-        <% for(var i = 0; i < kayaks.length; i++) {%>
-        <li class = "kayaks">
+        <% for(var i = 0; i < renters.length; i++) {%>
+        <li class = "renters">
 
-
-            <!-- not nessecary
-              <span>Kayak: <%= kayaks[i].name %></span><br> 
-            <span>Kayakid: <%= kayaks[i]._id %></span><br> -->
            
-            
-
-            <form action="/deleteKayaks/<%= kayaks[i]._id %>" method="post">
-              <!-- 11/23 all it's doing at the moment is sending the id to console -->
-              <!-- dleete this after delete is wokring  -->
-                <!-- <p><%= kayaks[i]._id %></p>  -->
-          
-                <!-- <input type="hidden" name="id" value="<%= kayaks[i]._id %>"> -->
-                 <%= kayaks[i].name %> <br> <%= kayaks[i]._id %><br>
-                  <input type="hidden" name="id" value="<%= kayaks[i]._id %>">
+            <form action="/deleteRenters/<%= renters[i]._id %>" method="post">
+ 
+                  <%= renters[i].name %><br> <%= renters[i].phoneNum %> <br> <%= renters[i].dateRent %> <br>
+                  <input type="hidden" name="name" value="<%= renters[i]._id %>">
 
               <input type="submit" value = "Delete" />
             </form>
+
+
 
             <div> <br> </div>
 
