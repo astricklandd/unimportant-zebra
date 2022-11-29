@@ -3,8 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <title>Admin View</title>
-  </head>
 
+    <link rel="stylesheet" href="styles.css">
+    
+  
+  <nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#">OAC Admin</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="#" onclick="window.location.href= '/';">
+  Kayaks
+</a></li>
+              <li><a href="#" onclick="window.location.href= 'https://gorgeous-sweatsuit-calf.cyclic.app/';">
+  Admin
+</a></li>
+                <li><a href="#">Renter Information</a></li>
+                
+                <li><a href="#" onclick="window.location.href= 'https://github.com/astricklandd/unimportant-zebra/';">
+  Source Code
+</a></li>
+<!-- 									 <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+    Dropdown link
+  </a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Link 1</a>
+    <a class="dropdown-item" href="#">Link 2</a>
+    <a class="dropdown-item" href="#">Link 3</a>
+  </div>
+</li> -->
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+
+<section class="home">
+</section>
+<center>
+<div class="card">
+  <div class="card-header">
+      <div style="height: 150px">
+    <!-- just to make scrolling effect possible -->
+            <h2 class="myH2">There are <%= kayaksAvailable %> available kayaks! </h2> <br>
+          </div>
+
+          <!-- Jquery needed -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script src="js/scripts.js"></script>
+
+          <!-- Function used to shrink nav bar removing paddings and adding black background -->
+          <script>
+              $(window).scroll(function() {
+                  if ($(document).scrollTop() > 50) {
+                      $('.nav').addClass('affix');
+                      console.log("OK");
+                  } else {
+                      $('.nav').removeClass('affix');
+                  }
+              });
+          </script>
+
+</head>
   <body>
 
 <h1>Kayak Admin Page</h1> 
@@ -33,6 +100,8 @@
     <ul class = "list">
         <% for(var i = 0; i < renters.length; i++) {%>
         <li class = "renters">
+          <h3 class="myH3">
+
 
            
             <form action="/deleteRenters/<%= renters[i]._id %>" method="post">
@@ -50,7 +119,7 @@
         </li>
         <% } %>
         
-
+      </h3>
     </section> 
 
 <!-- test code 
