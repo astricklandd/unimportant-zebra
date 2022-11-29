@@ -87,12 +87,7 @@
       
 <center>
 
-    <!-- This (below) will allow a kayak to say kayak rented
-    However, this now makes the kayaksAvailable variable incorrect -->
-
-    <!-- Also this changed the name of a kayak to "kayak rented"
-    if we want to do that, we will need an employee input to update name of kayak after it
-  is no longer rented  -->
+   
     <ul class = "list">
         <% for(var i = 0; i < kayaks.length; i++) {%>
           <h3 class="myH3">
@@ -100,13 +95,13 @@
             <span>Kayak: <%= kayaks[i].name %></span><br>
             
             <form action="/result2" method="POST">
-              <input type="text" placeholder="Renter name" name="name2" />
+              <input type="text" placeholder="Renter name" name="name2" required />
             
-              <input type="text" placeholder="L Number" name="num2" />     
+              <input type="text" placeholder="L Number" name="num2" required />     
       
-              <input type="text" placeholder="Phone Number" name="phoneNum" />      
+              <input type="text" placeholder="Phone Number" name="phoneNum" required/>      
       
-              <input type="text" placeholder="Rent Date" name="date" />
+              <input type="text" placeholder="Rent Date" name="date" required/>
               <br>
               <button type="submit">Add Renter!</button>
             </form>
@@ -127,6 +122,6 @@
   </center>
     
 
-    <!-- <script src="main.js"></script> -->
+   
   </body>
   </html>
